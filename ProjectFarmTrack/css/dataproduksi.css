@@ -1,0 +1,442 @@
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green-dark:   #145a24;
+    --green-mid:    #2ea043;
+    --green-light:  #3fbd5a;
+    --green-btn:    #28a745;
+    --sidebar-w:    240px;
+    --radius:       14px;
+    --shadow:       0 4px 16px rgba(0,0,0,.15);
+    font-family: 'Nunito', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: none; /* hapus hijau */
+}
+/* ============================================================
+   LAYOUT DASHBOARD — background farm di sini (BUKAN di .main)
+   ============================================================ */
+.dashboard,
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-image: url("../image/background1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #2d4a2d;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+.sidebar {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    color: white;
+    padding: 16px 12px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 6px;
+}
+
+/* Logo FarmTrack */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #2e7d32;
+    border-radius: 30px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+}
+
+.logo span {
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Menu list */
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    padding: 0;
+}
+
+.sidebar li a,
+.sidebar li {
+    padding: 12px 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    background: #2e7d32;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    text-decoration: none;
+}
+
+.sidebar li a:hover,
+.sidebar li:hover {
+    background: #388e3c;
+    transform: translateX(3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar .active,
+.sidebar .active a {
+    background: #43a047;
+    font-weight: 800;
+    box-shadow: 0 3px 10px rgba(46, 125, 50, 0.45);
+}
+
+.menu-icon {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.sidebar-footer {
+    height: 14px;
+    background: #2e7d32;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================================================
+   MAIN AREA
+   ============================================================ */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background image
+   datapakan.html ada di ProjectFarmTrack/data/
+   path ke image: ../image/background1.jpg          */
+.bg-layer {
+    position: fixed;
+    inset: 0;
+    left: var(--sidebar-w);
+    background: url('../image/background1.jpg') center/cover no-repeat;
+    background-color: #2d5a2d;
+    z-index: 0;
+}
+
+.bg-layer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.22);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 22px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* ── Profile Icon ── */
+.profile-area {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    z-index: 2;
+}
+
+.profile-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.25);
+    border: 2px solid rgba(255,255,255,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    text-decoration: none;
+}
+
+/* ============================================================
+   STAT CARDS
+   ============================================================ */
+.stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow);
+    transition: transform .2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    font-size: 40px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 10px;
+    font-weight: 800;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 900;
+    color: #111;
+    line-height: 1.1;
+}
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 10px 20px;
+    flex: 1;
+    max-width: 380px;
+    box-shadow: var(--shadow);
+}
+
+.search-wrap input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-weight: 600;
+    width: 100%;
+    color: #333;
+}
+
+.search-wrap input::placeholder {
+    color: #bbb;
+}
+
+.toolbar-btn {
+    background: rgba(255,255,255,.88);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Nunito', Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    color: #333;
+    transition: background .15s;
+}
+
+.toolbar-btn:hover {
+    background: #fff;
+}
+
+.btn-add-main {
+    background: var(--green-btn);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 11px 26px;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Nunito', Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(40,167,69,.4);
+    transition: background .15s, transform .15s;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.btn-add-main:hover {
+    background: var(--green-light);
+    transform: translateY(-1px);
+}
+
+/* ============================================================
+   TABLE PANEL
+   ============================================================ */
+.table-panel {
+    background: rgba(255,255,255,.93);
+    backdrop-filter: blur(16px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.table-panel-header {
+    padding: 16px 20px 12px;
+    font-size: 13px;
+    font-weight: 900;
+    color: #222;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background: #f5f5f5;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #666;
+    text-align: left;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+tbody td {
+    padding: 11px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    white-space: nowrap;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover td {
+    background: #f9fff9;
+}
+
+/* ── Action Buttons ── */
+.action-cell {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-edit,
+.btn-del {
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: filter .15s, transform .15s;
+    text-decoration: none;
+}
+
+.btn-edit { background: #2ea043; color: #fff; }
+.btn-del  { background: #e53935; color: #fff; }
+
+.btn-edit:hover,
+.btn-del:hover {
+    filter: brightness(1.12);
+    transform: scale(1.08);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+    .stat-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .stat-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}

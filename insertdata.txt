@@ -1,0 +1,5 @@
+insert into tb_mhs values (362558302088, 'yardan', '1A', 'Islam')
+insert into tb_mhs values (362558302068, 'dani', '1A', 'Hindu')
+insert into tb_mhs values (362558302090, 'bayu', '1A', 'Katolik')
+insert into tb_mhs values (362558302077, 'sahla', '1A', 'Islam')
+insert into tb_mhs values (362558302079, 'jason', '1A', 'Islam')

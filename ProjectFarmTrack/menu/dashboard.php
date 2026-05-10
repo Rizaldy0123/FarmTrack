@@ -1,0 +1,216 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['login'])){
+    header("Location: ../auth/insert_login.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmTrack Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+<div class="dashboard">
+
+    <!-- ── SIDEBAR (sama seperti datakandang) ── -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="../image/logofarmtrack.png" alt="logo">
+            <span>🐔 FarmTrack</span>
+        </div>
+
+        <ul>
+            <li class="active">⊞ Dashboard</li>
+            <li>🏠 Kandang</li>
+            <li>🥚 Produksi</li>
+            <li>👷 Karyawan</li>
+            <li>🌾 Pakan</li>
+            <li>⚙️ Pengaturan</li>
+        </ul>
+
+        <div class="sidebar-footer"></div>
+
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main">
+
+        <!-- STAT CARDS + PROFILE -->
+        <div class="topbar">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <div class="card-info">
+                        <h4>Total Kandang</h4>
+                        <p>10</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🐔</div>
+                    <div class="card-info">
+                        <h4>Total Ayam</h4>
+                        <p>5,275</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🥚</div>
+                    <div class="card-info">
+                        <h4>Produksi Hari Ini</h4>
+                        <p>2,759</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👷</div>
+                    <div class="card-info">
+                        <h4>Karyawan Aktif</h4>
+                        <p>8</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-icon">👤</div>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="top-controls">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search">
+            </div>
+                <button class="filter-btn">UMUR AYAM</button>
+                <button class="filter-btn">JUMLAH AYAM</button>
+
+        </div>
+
+        <!-- GRAFIK CSS ONLY -->
+        <section class="grafik">
+            <h3>Grafik Produksi Telur Mingguan</h3>
+            <div class="grafik-area">
+                <div class="grafik-y">
+                    <span>4,600</span>
+                    <span>3,800</span>
+                    <span>2,900</span>
+                </div>
+                <div class="grafik-bars">
+                    <div class="grafik-col">
+                        <div class="bar-wrap"><div class="bar" style="height: 55%"></div></div>
+                        <span class="bar-label">Sen</span>
+                    </div>
+                    <div class="grafik-col">
+                        <div class="bar-wrap"><div class="bar" style="height: 70%"></div></div>
+                        <span class="bar-label">Sel</span>
+                    </div>
+                    <div class="grafik-col">
+                        <div class="bar-wrap"><div class="bar" style="height: 85%"></div></div>
+                        <span class="bar-label">Rab</span>
+                    </div>
+                    <div class="grafik-col">
+                        <div class="bar-wrap"><div class="bar" style="height: 92%"></div></div>
+                        <span class="bar-label">Kam</span>
+                    </div>
+                    <div class="grafik-col">
+                        <div class="bar-wrap"><div class="bar" style="height: 88%"></div></div>
+                        <span class="bar-label">Jum</span>
+                    </div>
+                    <div class="grafik-col">
+                        <div class="bar-wrap"><div class="bar" style="height: 100%"></div></div>
+                        <span class="bar-label">Sab</span>
+                    </div>
+                    <div class="grafik-col">
+                        <div class="bar-wrap"><div class="bar" style="height: 78%"></div></div>
+                        <span class="bar-label">Ming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABEL BAWAH -->
+        <section class="tables">
+
+            <!-- Data Produksi -->
+            <div class="table-box">
+                <h3>Data Produksi Terbaru</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>ID Kandang</th>
+                            <th>Jumlah Telur</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2026-06-09</td><td>KD01</td><td>5,003</td></tr>
+                        <tr><td>2026-06-10</td><td>KD02</td><td>876</td></tr>
+                        <tr><td>2026-06-16</td><td>KD03</td><td>323</td></tr>
+                        <tr><td>2026-06-22</td><td>KD04</td><td>4,005</td></tr>
+                        <tr><td>2026-06-19</td><td>KD05</td><td>1,007</td></tr>
+                        <tr><td>2026-06-11</td><td>KD06</td><td>2,092</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Status Kandang -->
+            <div class="table-box">
+                <h3>Status Kandang</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Kandang</th>
+                            <th>Jumlah Ayam</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>KD01</td><td>753</td><td><span class="aktif">Aktif</span></td></tr>
+                        <tr><td>KD02</td><td>753</td><td><span class="panen">Panen</span></td></tr>
+                        <tr><td>KD03</td><td>753</td><td><span class="kosong">Kosong</span></td></tr>
+                        <tr><td>KD04</td><td>753</td><td><span class="panen">Panen</span></td></tr>
+                        <tr><td>KD05</td><td>753</td><td><span class="kosong">Kosong</span></td></tr>
+                        <tr><td>KD06</td><td>753</td><td><span class="aktif">Aktif</span></td></tr>
+                        <tr><td>KD07</td><td>753</td><td><span class="panen">Panen</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Aktivitas Terbaru -->
+            <div class="table-box">
+                <h3>Aktivitas Terbaru</h3>
+                <ul class="aktivitas">
+                    <li>
+                        <div class="akt-avatar">👩</div>
+                        <div class="akt-info">
+                            <div class="akt-nama">Jannah <span class="akt-waktu">10 Minute ago</span></div>
+                            <div class="akt-desc">Produksi Telur di <span>KD03</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="akt-avatar">👨</div>
+                        <div class="akt-info">
+                            <div class="akt-nama">Azman <span class="akt-waktu">30 Minute ago</span></div>
+                            <div class="akt-desc">Membersihkan <span>KD01</span></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="akt-avatar">👦</div>
+                        <div class="akt-info">
+                            <div class="akt-nama">Ezra <span class="akt-waktu">5 Minute ago</span></div>
+                            <div class="akt-desc">Produksi Telur di <span>KD05</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+</body>
+</html>

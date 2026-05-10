@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmTrack - Data Pakan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/datapakan.css">
+</head>
+
+<body class="background">
+
+    <!-- ============================================================
+         SIDEBAR  (struktur identik dengan dashboard.html)
+    ============================================================ -->
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>🐔 FarmTrack</h2>
+            </div>
+
+            <ul>
+                <li>📊 Dashboard</li>
+                <li>🏠 Kandang</li>
+                <li>🥚 Produksi</li>
+                <li>👷 Karyawan</li>
+                <li class="active">🌾 Pakan</li>
+                <li>⚙️ Pengaturan</li>
+        </div>
+
+
+    <!-- ============================================================
+         MAIN  (struktur identik dengan dashboard.html)
+    ============================================================ -->
+    <div class="main">
+
+        <!-- Background layer -->
+        <div class="bg-layer"></div>
+
+        <div class="content">
+
+            <!-- ── STAT CARDS ── -->
+            <div class="stat-row">
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏚️</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Total Kandang</span>
+                        <span class="stat-value">10</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🐔</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Total Ayam</span>
+                        <span class="stat-value">5,275</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🥚</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Produksi Hari Ini</span>
+                        <span class="stat-value">2,759</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">👷</div>
+                    <div class="stat-info">
+                        <span class="stat-label">Karyawan Aktif</span>
+                        <span class="stat-value">8</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ── TOOLBAR ── -->
+            <div class="toolbar">
+                
+                <div class="search-wrap">
+                    <span>🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <button class="toolbar-btn">Jenis Pakan</button>
+                <button class="toolbar-btn">Jumlah Stok</button>
+                <a href="tambah-pakan.html" class="btn-add-main">+ Tambah Pakan</a>
+
+            </div>
+
+            <!-- ── TABEL PAKAN ── -->
+            <div class="table-panel">
+
+                <div class="table-panel-header">Pakan</div>
+
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID_PAKAN</th>
+                                <th>NAMA_PAKAN</th>
+                                <th>JENIS</th>
+                                <th>STOK</th>
+                                <th>ID_KANDANG</th>
+                                <th>CHANGE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4P</td>
+                                <td>500</td>
+                                <td>97</td>
+                                <td>5KG</td>
+                                <td>KD01</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=4P" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=4P" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>876</td>
+                                <td>97</td>
+                                <td>5KG</td>
+                                <td>KD02</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=7" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=7" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>323</td>
+                                <td>95</td>
+                                <td>5KG</td>
+                                <td>KD03</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=14" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=14" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2P</td>
+                                <td>625</td>
+                                <td>92</td>
+                                <td>5KG</td>
+                                <td>KD04</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=2P" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=2P" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>763</td>
+                                <td>92</td>
+                                <td>5KG</td>
+                                <td>KD05</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=6" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=6" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>650</td>
+                                <td>92</td>
+                                <td>5KG</td>
+                                <td>KD06</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=16" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=16" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>753</td>
+                                <td>80</td>
+                                <td>5KG</td>
+                                <td>KD07</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=4" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=4" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8A</td>
+                                <td>403</td>
+                                <td>80</td>
+                                <td>5KG</td>
+                                <td>KD08</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=8A" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=8A" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>578</td>
+                                <td>80</td>
+                                <td>5KG</td>
+                                <td>KD09</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=17" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=17" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5P</td>
+                                <td>567</td>
+                                <td>70</td>
+                                <td>5KG</td>
+                                <td>KD10</td>
+                                <td>
+                                    <div class="action-cell">
+                                        <a href="edit-pakan.html?id=5P" class="btn-edit">✏️</a>
+                                        <a href="hapus-pakan.html?id=5P" class="btn-del">🗑️</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /content -->
+
+    </div>
+    <!-- /main -->
+
+</body>
+</html>

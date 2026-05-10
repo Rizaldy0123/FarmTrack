@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+
+  <!-- PERBAIKI PATH CSS -->
+  <link href="../login/login.css" rel="stylesheet">
+
+  <title>Login FarmTrack</title>
+</head>
+
+<body>
+  <div class="LOGIN-PAGE">
+
+    <!-- LOGO (ganti nama file tanpa spasi) -->
+    <img class="logo" src="../image/logo-farm-track.png" />
+
+    <!-- FORM LOGIN -->
+    <form action="insert.php" class="login-form" method="POST">
+
+      <h2>Login</h2>
+
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Masukkan email" required>
+
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Masukkan password" required>
+
+      <button type="submit">Log in</button>
+
+      <p class="link">Forgot password?</p>
+      <p class="link">Daftar Sekarang</p>
+
+    </form>
+
+  </div>
+</body>
+
+</html>

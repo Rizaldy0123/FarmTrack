@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Kandang</title>
+  <link rel="stylesheet" href="../style css/style.css">
+</head>
+
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../image/bg\ figma.jpeg");
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+</style>
+
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <h2>🐔 FarmTrack</h2>
+      </div>
+
+      <ul>
+        <li>Dashboard</li>
+        <li class="active">Kandang</li>
+        <li>Produksi</li>
+        <li>Karyawan</li>
+        <li>Pakan</li>
+        <li>Pengaturan</li>
+      </ul>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <h1>DATA KANDANG</h1>
+
+      <!-- STAT CARD -->
+      <div class="cards">
+
+        <div class="card">
+          <h4>Total Kandang</h4>
+          <p>10</p>
+        </div>
+
+        <div class="card">
+          <h4>Total Ayam</h4>
+          <p>5,275</p>
+        </div>
+
+        <div class="card">
+          <h4>Produksi Hari Ini</h4>
+          <p>2,759</p>
+        </div>
+
+        <div class="card">
+          <h4>Karyawan Aktif</h4>
+          <p>8</p>
+        </div>
+
+      </div>
+
+
+      <!-- SEARCH -->
+      <div class="search">
+
+        <input type="text" placeholder="Search">
+        <button>Umur Ayam</button>
+        <button>Jumlah Ayam</button>
+
+        <button class="btn-add">Tambah Kandang</button>
+
+      </div>
+
+
+      <!-- TABLE -->
+      <div class="table-box">
+        <h2>KANDANG AYAM</h2>
+        <table>
+
+          <tr>
+            <th>ID Kandang</th>
+            <th>Nama Kandang</th>
+            <th>Status</th>
+            <th>Jumlah Ayam</th>
+            <th>ID Karyawan</th>
+            <th>Umur Ayam</th>
+          </tr>
+
+          <tr>
+            <td>KD01</td>
+            <td>4P</td>
+            <td><span class="aktif">Aktif</span></td>
+            <td>500</td>
+            <td>K01</td>
+            <td>97</td>
+          </tr>
+
+          <tr>
+            <td>KD02</td>
+            <td>7</td>
+            <td><span class="panen">Panen</span></td>
+            <td>876</td>
+            <td>K02</td>
+            <td>97</td>
+          </tr>
+
+          <tr>
+            <td>KD03</td>
+            <td>14</td>
+            <td><span class="kosong">Kosong</span></td>
+            <td>323</td>
+            <td>K03</td>
+            <td>95</td>
+          </tr>
+
+          <tr>
+            <td>KD04</td>
+            <td>2P</td>
+            <td><span class="aktif">Aktif</span></td>
+            <td>625</td>
+            <td>K04</td>
+            <td>92</td>
+          </tr>
+
+          <tr>
+            <td>KD05</td>
+            <td>6</td>
+            <td><span class="aktif">Aktif</span></td>
+            <td>763</td>
+            <td>K05</td>
+            <td>92</td>
+          </tr>
+
+          <tr>
+            <td>KD06</td>
+            <td>16</td>
+            <td><span class="panen">Panen</span></td>
+            <td>650</td>
+            <td>K06</td>
+            <td>92</td>
+          </tr>
+
+          <tr>
+            <td>KD07</td>
+            <td>4</td>
+            <td><span class="kosong">Kosong</span></td>
+            <td>753</td>
+            <td>K07</td>
+            <td>80</td>
+          </tr>
+
+          <tr>
+            <td>KD08</td>
+            <td>8A</td>
+            <td><span class="panen">Panen</span></td>
+            <td>403</td>
+            <td>K08</td>
+            <td>80</td>
+          </tr>
+
+          <tr>
+            <td>KD09</td>
+            <td>17</td>
+            <td><span class="aktif">Aktif</span></td>
+            <td>578</td>
+            <td>K09</td>
+            <td>80</td>
+          </tr>
+
+          <tr>
+            <td>KD10</td>
+            <td>5P</td>
+            <td><span class="aktif">Aktif</span></td>
+            <td>567</td>
+            <td>K10</td>
+            <td>70</td>
+          </tr>
+        </table>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>

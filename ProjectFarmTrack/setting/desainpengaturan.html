@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pengaturan Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/setting.css">
+</head>
+
+<body class="background">
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span>🐔 FarmTrack</span>
+        </div>
+        <ul>
+            <li><a href="../menu/dashboard.php">📊 Dashboard</a></li>
+            <li><a href="../data/datakandang.php">🏠 Kandang</a></li>
+            <li><a href="../data/dataproduksi.html">🥚 Produksi</a></li>
+            <li><a href="../data/datakaryawan.php">👷 Karyawan</a></li>
+            <li><a href="../data/datapakan.html">🌾 Pakan</a></li>
+            <li class="active"><a href="setting.php">⚙️ Pengaturan</a></li>
+        </ul>
+        <div class="sidebar-footer"></div>
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>Profile Akun</h1>
+        <div class="card">
+            <form action="update_profile.php" method="POST" enctype="multipart/form-data">
+                <div class="profile-layout">
+
+                    <!-- FOTO -->
+                    <div class="profile-left">
+                        <div class="avatar">👤</div>
+                        <input type="file" id="inputFoto" name="foto" accept="image/*" style="display:none">
+                        <button type="button" class="btn-foto" onclick="document.getElementById('inputFoto').click()">
+                            📷 Ganti Foto Profile
+                        </button>
+                    </div>
+
+                    <!-- FORM -->
+                    <div class="profile-right">
+                        <label for="nama">Nama</label>
+                        <input type="text" id="nama" name="nama" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Kosongkan jika tidak ingin ganti">
+
+                        <button type="submit" class="btn-simpan">Simpan Perubahan</button>
+                        <a href="../auth/logout.php">
+                            <button type="button" class="btn-logout">Logout</button>
+                        </a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

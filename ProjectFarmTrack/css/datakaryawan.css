@@ -1,0 +1,755 @@
+/* ============================================================
+   RESET
+   ============================================================ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================================================
+   BACKGROUND LOGIN
+   ============================================================ */
+.backgroundutama {
+    background-image: url("../image/background1.jpg");
+    background-color: #2d4a2d;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.backgroundutama::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(10, 30, 10, 0.45) 0%,
+            rgba(20, 50, 20, 0.5) 100%);
+    z-index: 0;
+}
+
+.backgroundutama > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   LOGIN BOX
+   ============================================================ */
+.login-box {
+    background: rgba(20, 30, 20, 0.70);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 36px 32px;
+    width: 360px;
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
+    animation: fadeUp 0.5s ease both;
+    text-align: center;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h4 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.login-box .logo,
+.logo-img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin: 0 auto 24px;
+    display: block;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px;
+}
+
+/* ============================================================
+   FORM CONTROL
+   ============================================================ */
+.form-control {
+    width: 100%;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 50px;
+    color: #f0f4f0;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.form-control::placeholder { color: rgba(240, 244, 240, 0.55); }
+
+.form-control:focus {
+    border-color: #34c759;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 3px rgba(52, 199, 89, 0.2);
+}
+
+.mb-3 { margin-bottom: 14px; }
+.mb-4 { margin-bottom: 20px; }
+.mb-5 { margin-bottom: 28px; }
+
+/* CARD FORM */
+.form-card {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 30px;
+    max-width: 650px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    margin: 40px auto;
+}
+
+/* HEADER */
+.form-header h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.form-grid {
+    display: grid;
+    gap: 18px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* INPUT STYLE */
+input, select {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* FOCUS EFFECT */
+input:focus, select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.2);
+}
+
+/* BUTTON AREA */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* BUTTON SAVE */
+.btn-save {
+    background: #2ea043;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(46,160,67,0.4);
+    transition: 0.2s;
+}
+
+.btn-save:hover {
+    background: #3fbd5a;
+    transform: translateY(-1px);
+}
+
+/* BUTTON CANCEL */
+.btn-cancel {
+    background: #e53935;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #ff4d4d;
+}
+
+/* ============================================================
+   TOMBOL LOGIN
+   ============================================================ */
+.d-grid { display: grid; }
+
+.btn-login {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #34c759 0%, #28a745 100%);
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(52, 199, 89, 0.45);
+    transition: filter 0.15s, transform 0.15s, box-shadow 0.2s;
+}
+
+.btn-login:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(52, 199, 89, 0.6);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+    filter: brightness(0.95);
+}
+
+/* ============================================================
+   LINK BAWAH
+   ============================================================ */
+.d-flex { display: flex; }
+.justify-content-between { justify-content: space-between; }
+
+.link {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: rgba(240, 244, 240, 0.70);
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ============================================================
+   LAYOUT DASHBOARD — background farm di sini (BUKAN di .main)
+   ============================================================ */
+.dashboard,
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-image: url("../image/background1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #2d4a2d;
+}
+
+/* ============================================================
+   SIDEBAR — transparan mengambang di atas background farm
+   ============================================================ */
+.sidebar {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.15); /* transparan */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    color: white;
+    padding: 16px 12px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 6px;
+}
+
+/* Logo FarmTrack — pill hijau */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #2e7d32;
+    border-radius: 30px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+}
+
+.logo span,
+.logo h2 {
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* Menu list */
+.sidebar ul,
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+/* Setiap menu item — pill hijau solid */
+.sidebar li,
+.menu li {
+    padding: 12px 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    background: #2e7d32;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    text-decoration: none;
+    list-style: none;
+}
+
+.sidebar li:hover,
+.menu li:hover {
+    background: #388e3c;
+    transform: translateX(3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar .active,
+.menu .active {
+    background: #43a047;
+    font-weight: 800;
+    box-shadow: 0 3px 10px rgba(46, 125, 50, 0.45);
+}
+
+.sidebar-footer {
+    height: 14px;
+    background: #2e7d32;
+    border-radius: 10px;
+    margin-top: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================
+   MAIN / CONTENT AREA — tidak perlu background lagi
+   ============================================================ */
+.main,
+.content {
+    flex: 1;
+    padding: 24px 28px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.main h1,
+.content h1 {
+    font-size: 15px;
+    color: #e0e0e0;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   PROFILE ICON
+   ============================================================ */
+.profile-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+/* ============================================================
+   TOPBAR
+   ============================================================ */
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.topbar .cards {
+    flex: 1;
+}
+
+/* ============================================================
+   CARDS STATISTIK
+   ============================================================ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon { font-size: 28px; flex-shrink: 0; }
+
+.card h4,
+.card-info h4 {
+    font-size: 10px;
+    color: #555;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+}
+
+.card p,
+.card-info p {
+    font-size: 20px;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+/* ============================================================
+   TOP CONTROLS & SEARCH
+   ============================================================ */
+.top-bar,
+.top-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 9px 16px;
+    width: 320px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+    background: transparent;
+    font-weight: 500;
+}
+
+.search-icon,
+.icon { font-size: 15px; color: #555; }
+
+.filter-btn,
+.btn-filter {
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 9px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.filter-btn:hover,
+.btn-filter:hover { background: rgba(255, 255, 255, 0.35); }
+
+.add-btn,
+.btn-add {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 13px;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.add-btn:hover,
+.btn-add:hover { background: #1b5e20; }
+
+/* ============================================================
+   GRAFIK
+   ============================================================ */
+.grafik {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.grafik img { width: 100%; margin-top: 10px; }
+
+/* ============================================================
+   TABLE AREA
+   ============================================================ */
+.tables {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    gap: 20px;
+}
+
+.table-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 24px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow-x: auto;
+}
+
+.table-box h2 {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+}
+
+.table-box h3 {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+table { width: 100%; border-collapse: collapse; }
+
+table th,
+table thead th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 800;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f0f0f0;
+    background: #f5f5f5;
+}
+
+table td,
+table tbody td {
+    padding: 11px 14px;
+    font-size: 13.5px;
+    color: #222;
+    font-weight: 500;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+table tbody tr:last-child td { border-bottom: none; }
+table tbody tr:hover td { background: #f5fff5; }
+
+/* ============================================================
+   STATUS BADGE
+   ============================================================ */
+.aktif {
+    color: white;
+    background: #43a047;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.panen {
+    color: white;
+    background: #fb8c00;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.kosong {
+    color: white;
+    background: #e53935;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+/* ============================================================
+   TOMBOL AKSI (edit/delete di tabel)
+   ============================================================ */
+.edit,
+.btn-edit {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.edit:hover,
+.btn-edit:hover { background: #1565c0; }
+
+.delete,
+.btn-hapus {
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.delete:hover,
+.btn-hapus:hover { background: #c62828; }
+
+.aksi-col { display: flex; gap: 6px; align-items: center; }
+
+/* ============================================================
+   NOTIFIKASI
+   ============================================================ */
+.notif {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.notif.sukses { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.notif.error  { background: #fdecea; color: #c62828; border: 1px solid #ef9a9a; }
+
+/* ============================================================
+   PROFILE PAGE
+   ============================================================ */
+.profile-layout { display: flex; gap: 40px; align-items: center; }
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    background: #43a047;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.btn-foto { background: #66bb6a; border: none; padding: 8px 14px; border-radius: 6px; color: white; cursor: pointer; }
+.profile-right { flex: 1; display: flex; flex-direction: column; }
+.profile-right label { margin-top: 10px; margin-bottom: 5px; }
+.profile-right input { padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+
+.btn-simpan {
+    margin-top: 20px;
+    padding: 10px;
+    width: 180px;
+    background: #66bb6a;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-simpan:hover { background: #43a047; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .tables { grid-template-columns: 1fr; }
+    .sidebar { width: 190px; }
+}
+
+@media (max-width: 700px) {
+    .dashboard, .container { flex-direction: column; }
+    .sidebar { width: 100%; padding: 12px; }
+    .sidebar ul { flex-direction: row; flex-wrap: wrap; }
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .main, .content { padding: 16px; }
+}
+
+@media (max-width: 600px) {
+    .login-box { width: 90vw; padding: 30px 20px 24px; }
+}

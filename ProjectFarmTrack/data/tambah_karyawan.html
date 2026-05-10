@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tambah Karyawan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/datakaryawan.css">
+    <link rel="stylesheet" href="../css/tambah_karyawan.css"
+</head>
+
+<body class="background">
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>🐔 FarmTrack</h2>
+        </div>
+
+        <ul>
+            <li>📊 Dashboard</li>
+            <li>🏠 Kandang</li>
+            <li>🥚 Produksi</li>
+            <li class="active">👷 Karyawan</li>
+            <li>🌾 Pakan</li>
+            <li>⚙️ Pengaturan</li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <div class="table-box">
+            <h3>Tambah Karyawan</h3>
+
+            <form action="insert_karyawan.php" method="POST">
+<div class="form-card">
+
+    <div class="form-header">
+        <p>Masukkan data karyawan baru ke dalam sistem</p>
+    </div>
+
+    <form class="form-grid" action="insert_karyawan.php" method="POST">
+
+        <div class="input-group">
+            <label>ID Karyawan</label>
+            <input type="text" name="id_karyawan" placeholder="Contoh: K001" required>
+        </div>
+
+        <div class="input-group">
+            <label>Nama Karyawan</label>
+            <input type="text" name="nama_karyawan" placeholder="Masukkan nama lengkap" required>
+        </div>
+
+        <div class="input-group">
+            <label>Jabatan</label>
+            <select name="jabatan" required>
+                <option value="">Pilih Jabatan</option>
+                <option value="Produksi">Produksi</option>
+                <option value="Kebersihan">Kebersihan</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Status</label>
+            <select name="status" required>
+                <option value="">Pilih Status</option>
+                <option value="Aktif">Aktif</option>
+                <option value="Panen">Panen</option>
+                <option value="Cuti">Cuti</option>
+            </select>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-save">Simpan</button>
+            <a href="datakaryawan.html" class="btn-cancel">Batal</a>
+        </div>
+
+    </form>
+
+</div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

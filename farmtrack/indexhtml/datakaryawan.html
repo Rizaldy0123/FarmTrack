@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Karyawan</title>
+    <link rel="stylesheet" href="../style css/style.css">
+</head>
+
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: justify;
+        align-items: justify;
+        background-image: url("../image/bg\ figma.jpeg");
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+    }
+</style>
+
+<body>
+
+    <div class="dashboard">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <div class="logo">
+                <img src="img/logo.png">
+                <h3>FarmTrack</h3>
+            </div>
+
+            <ul>
+                <li>Dashboard</li>
+                <li>Kandang</li>
+                <li>Produksi</li>
+                <li class="active">Karyawan</li>
+                <li>Pakan</li>
+                <li>Pengaturan</li>
+            </ul>
+
+        </div>
+
+
+        <!-- MAIN -->
+        <div class="main">
+
+            <h1>DATA KARYAWAN</h1>
+
+            <!-- CARD -->
+            <div class="cards">
+
+                <div class="card">
+                    <h4>Total Kandang</h4>
+                    <p>10</p>
+                </div>
+
+                <div class="card">
+                    <h4>Total Ayam</h4>
+                    <p>5,275</p>
+                </div>
+
+                <div class="card">
+                    <h4>Produksi Hari Ini</h4>
+                    <p>2,759</p>
+                </div>
+
+                <div class="card">
+                    <h4>Karyawan Aktif</h4>
+                    <p>8</p>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="top-bar">
+
+                <div class="search-box">
+                    <span class="icon">🔍</span>
+                    <input type="text" placeholder="Search karyawan...">
+                </div>
+
+                <button class="filter-btn">Umur Ayam</button>
+                <button class="filter-btn">Jumlah Ayam</button>
+                <button class="add-btn">Tambah Karyawan</button>
+
+            </div>
+
+            <!-- TABLE -->
+            <div class="table-box">
+
+                <h3>STATISTIK KARYAWAN</h3>
+
+                <table>
+
+                    <tr>
+                        <th>ID_KARYAWAN</th>
+                        <th>NAMA_KARYAWAN</th>
+                        <th>JABATAN</th>
+                        <th>STATUS</th>
+                        <th>Change</th>
+                    </tr>
+
+                    <tr>
+                        <td>K01</td>
+                        <td>Ghatan</td>
+                        <td>Produksi</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K02</td>
+                        <td>Jannah</td>
+                        <td>Produksi</td>
+                        <td><span class="panen">Panen</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K03</td>
+                        <td>Azman</td>
+                        <td>Kebersihan</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K04</td>
+                        <td>Sucipto</td>
+                        <td>Kebersihan</td>
+                        <td><span class="kosong">Cuti</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K05</td>
+                        <td>Mohammad</td>
+                        <td>Produksi</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K06</td>
+                        <td>Khosim</td>
+                        <td>Kebersihan</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K07</td>
+                        <td>Ezra</td>
+                        <td>Produksi</td>
+                        <td><span class="panen">Panen</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K08</td>
+                        <td>Alif</td>
+                        <td>Kebersihan</td>
+                        <td><span class="panen">Panen</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K09</td>
+                        <td>Adit</td>
+                        <td>Kebersihan</td>
+                        <td><span class="kosong">Cuti</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>K10</td>
+                        <td>Aldi</td>
+                        <td>Produksi</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

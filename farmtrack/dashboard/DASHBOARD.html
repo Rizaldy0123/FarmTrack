@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmTrack Dashboard</title>
+  <link rel="stylesheet" href="../dashboard/dashboard.css">
+</head>
+
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/bgfigma.jpeg");
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
+</style>
+
+<body>
+
+  <div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <img src="/image/logo farm track.png ">
+        <h2>FarmTrack</h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Kandang</li>
+          <li>Produksi</li>
+          <li>Karyawan</li>
+          <li>Pakan</li>
+          <li>Pengaturan</li>
+        </ul>
+      </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <h1>DASHBOARD</h1>
+
+      <!-- CARD STATISTIK -->
+      <div class="cards">
+
+        <div class="card">
+          <h4>Total Kandang</h4>
+          <p>10</p>
+        </div>
+
+        <div class="card">
+          <h4>Total Ayam</h4>
+          <p>5,275</p>
+        </div>
+
+        <div class="card">
+          <h4>Produksi Hari Ini</h4>
+          <p>2,759</p>
+        </div>
+
+        <div class="card">
+          <h4>Karyawan Aktif</h4>
+          <p>8</p>
+        </div>
+
+      </div>
+
+
+      <!-- SEARCH BAR -->
+<form method="POST" class="search-box">
+  <span class="search-icon">🔍</span>
+  <input type="text" name="search" placeholder="Search..." value="<?= $search ?>">
+  <button type="submit" name="btnSearch">Cari</button>
+</form>
+
+        <button class="filter-btn">Umur Ayam</button>
+        <button class="filter-btn">Jumlah Ayam</button>
+        <button class="add-btn">Tambah Kandang</button>
+
+      </div>
+
+
+      <!-- GRAFIK -->
+      <section class="grafik">
+        <h3>Grafik Produksi Telur Mingguan</h3>
+        <img src="img/chart.png">
+      </section>
+
+
+      <!-- DATA PRODUKSI -->
+      <section class="tables">
+
+        <div class="table-box">
+          <h3>Data Produksi Terbaru</h3>
+
+          <table>
+            <tr>
+              <th>Tanggal</th>
+              <th>ID Kandang</th>
+              <th>Jumlah Telur</th>
+            </tr>
+
+            <tr>
+              <td>2026-06-09</td>
+              <td>KD01</td>
+              <td>5,003</td>
+            </tr>
+
+            <tr>
+              <td>2026-06-10</td>
+              <td>KD02</td>
+              <td>876</td>
+            </tr>
+
+            <tr>
+              <td>2026-06-16</td>
+              <td>KD03</td>
+              <td>323</td>
+            </tr>
+
+          </table>
+        </div>
+
+
+        <!-- STATUS KANDANG -->
+        <div class="table-box">
+          <h3>Status Kandang</h3>
+
+          <table>
+            <tr>
+              <th>ID Kandang</th>
+              <th>Jumlah Ayam</th>
+              <th>Status</th>
+            </tr>
+
+            <tr>
+              <td>KD01</td>
+              <td>753</td>
+              <td class="aktif">Aktif</td>
+            </tr>
+
+            <tr>
+              <td>KD02</td>
+              <td>753</td>
+              <td class="panen">Panen</td>
+            </tr>
+
+            <tr>
+              <td>KD03</td>
+              <td>753</td>
+              <td class="kosong">Kosong</td>
+            </tr>
+
+          </table>
+
+        </div>
+
+
+        <!-- AKTIVITAS -->
+        <div class="table-box">
+          <h3>Aktivitas Terbaru</h3>
+
+          <ul class="aktivitas">
+            <li>Jannah - Produksi telur di KD03 (10 menit lalu)</li>
+            <li>Azman - Membersihkan KD01 (30 menit lalu)</li>
+            <li>Ezra - Produksi telur di KD05 (5 menit lalu)</li>
+          </ul>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>

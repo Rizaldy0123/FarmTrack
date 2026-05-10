@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FarmTrack Login</title>
+
+    <link href="stylesheet" rel="../style css/style.css">
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("bg figma.jpeg");
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+        }
+
+        .login-box {
+            width: 400px;
+            padding: 40px;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            color: white;
+            text-align: center;
+        }
+
+        .login-box img {
+            width: 40px;
+            margin-right: 8px;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+        }
+
+        .form-control::placeholder {
+            color: #ddd;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            box-shadow: none;
+        }
+
+        .btn-login {
+            background: #43a047;
+            border: none;
+            border-radius: 25px;
+            padding: 10px;
+            font-weight: 500;
+        }
+
+        .btn-login:hover {
+            background: #2e7d32;
+        }
+
+        .link {
+            font-size: 14px;
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h4 class="mb-4">
+            🐔 <b>FarmTrack</b>
+        </h4>
+
+        <form>
+
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email">
+            </div>
+
+            <div class="mb-4">
+                <input type="password" class="form-control" placeholder="Password">
+            </div>
+
+            <div class="d-grid mb-3">
+                <button class="btn btn-login">Log in</button>
+            </div>
+
+            <div class="d-flex justify-content-between">
+
+                <a href="#" class="link">Daftar Sekarang</a>
+
+                <a href="#" class="link">Forgot password?</a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.LOGIN-PAGE {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #2E7D32;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+.login-form input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* BUTTON */
+.login-form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-form button:hover {
+    background: #388E3C;
+}
+
+/* LINK */
+.link {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #4CAF50;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #2E7D32;
+}

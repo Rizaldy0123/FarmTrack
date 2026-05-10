@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FarmTrack</title>
+</head>
+
+<body>
+    <!-- ================= LOGIN ================= -->
+    <div id="login" class="page active center">
+        <div class="box">
+            <form action="insert.php" method="POST">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email"><br><br>
+            <input type="password" placeholder="Password"><br><br>
+
+            <button onclick="showPage('dashboard')">Login</button>
+            <p onclick="showPage('register')">Daftar</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= REGISTER ================= -->
+    <div id="register" class="page center">
+        <div class="box">
+            <h2>Register</h2>
+            <input type="text" placeholder="Nama"><br><br>
+            <input type="email" placeholder="Email"><br><br>
+            <input type="password" placeholder="Password"><br><br>
+
+            <button onclick="showPage('login')">Daftar</button>
+        </div>
+    </div>
+
+    <!-- ================= DASHBOARD ================= -->
+    <div id="dashboard" class="page">
+        <h1>DASHBOARD</h1>
+
+        <button onclick="showPage('kandang')">Data Kandang</button>
+        <button onclick="showPage('produksi')">Data Produksi</button>
+        <button onclick="showPage('login')">Logout</button>
+
+        <div>
+            <p>Total Kandang: 10</p>
+            <p>Total Ayam: 5275</p>
+        </div>
+    </div>
+
+    <!-- ================= DATA KANDANG ================= -->
+    <div id="kandang" class="page">
+        <h1>DATA KANDANG</h1>
+
+        <button onclick="showPage('dashboard')">← Kembali</button>
+
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>KD01</td>
+                <td>4P</td>
+                <td>Aktif</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ================= DATA PRODUKSI ================= -->
+    <div id="produksi" class="page">
+        <h1>DATA PRODUKSI</h1>
+
+        <button onclick="showPage('dashboard')">← Kembali</button>
+
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Tanggal</th>
+                <th>Jumlah</th>
+            </tr>
+            <tr>
+                <td>P01</td>
+                <td>2026-06-10</td>
+                <td>500</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active'));
+
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
