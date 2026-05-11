@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmTrack - Data Pakan</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+
+
+</head>
+
+<body class="background">
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>🐔 FarmTrack</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Kandang</li>
+                    <li>Produksi</li>
+                    <li>Karyawan</li>
+                    <li class="active">Pakan</li>
+                    <li>Pengaturan</li>
+                </ul>
+            </nav>
+        </aside>
+
+
+        <!-- Main -->
+        <div class="main">
+
+            <h1>DATA PAKAN</h1>
+
+            <!-- Statistik -->
+            <div class="cards">
+                <div class="card">
+                    <h4>Kandang</h4>
+                    <p>10</p>
+                </div>
+
+                <div class="card">
+                    <h4>Total Ayam</h4>
+                    <p>5,275</p>
+                </div>
+
+                <div class="card">
+                    <h4>Produksi Hari Ini</h4>
+                    <p>2,759</p>
+                </div>
+
+                <div class="card">
+                    <h4>Karyawan Aktif</h4>
+                    <p>8</p>
+                </div>
+            </div>
+
+            <!-- Search -->
+             <div class="top-bar">
+
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <button class="filter-btn">Umur Ayam</button>
+                <button class="filter-btn">Jumlah Ayam</button>
+                <button class="add-btn">Tambah Kandang</button>
+            </div>
+
+
+            <!-- Table -->
+            <div class="table-box">
+                
+                <h3>DATA PAKAN</h3>
+
+                <table>
+
+                    <tr>
+                        <th>ID_PAKAN</th>
+                        <th>NAMA_PAKAN</th>
+                        <th>JENIS</th>
+                        <th>STOK</th>
+                        <th>ID_KANDANG</th>
+                        <th>CHANGE</th>
+                    </tr>
+
+                    <tr>
+                        <td>1P</td>
+                        <td>Sentrat</td>
+                        <td>Butir</td>
+                        <td>5 TON</td>
+                        <td>KD01</td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2P</td>
+                        <td>Sentrat</td>
+                        <td>Butir</td>
+                        <td>5 TON</td>
+                        <td>KD02</td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3P</td>
+                        <td>Sentrat</td>
+                        <td>Butir</td>
+                        <td>5 TON</td>
+                        <td>KD03</td>
+                        <td>
+                            <button class="edit">✏</button>
+                            <button class="delete">🗑</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

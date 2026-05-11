@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Produksi - FarmTrack</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="background">
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h2 class="logo">🐔 FarmTrack</h2>
+
+            <ul class="menu">
+                <li>Dashboard</li>
+                <li>Kandang</li>
+                <li class="active">Produksi</li>
+                <li>Karyawan</li>
+                <li>Pakan</li>
+                <li>Pengaturan</li>
+            </ul>
+        </div>
+
+
+        <!-- MAIN CONTENT -->
+        <div class="main">
+
+            <h1>DATA PRODUKSI</h1>
+
+            <!-- CARD -->
+            <div class="cards">
+
+                <div class="card">
+                    <h4>Kandang</h4>
+                    <p>10</p    >
+                </div>
+
+                <div class="card">
+                    <h4>Total Ayam</h4>
+                    <p>5,275</p>
+                </div>
+
+                <div class="card">
+                    <h4>Produksi Hari Ini</h4   >
+                    <p>2,759</p>
+                </div>
+
+                <div class="card">
+                    <h4>Karyawan Aktif</h4>
+                    <p>8</p>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH BAR -->
+            <div class="top-bar">
+
+                <div class ="search-box">
+                    <span class="icon">🔍</span>
+                    <input type="text" placeholder="Search">
+                </div>
+
+                <button class="filter-btn">Umur Ayam</button>
+                <button class="filter-btn">Jumlah Ayam</button>
+                <button class="add-btn">Tambah Kandang</button>
+
+            </div>
+
+
+            <!-- TABLE -->
+            <div class="table-box">
+
+                <h2>DATA PRODUKSI</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID_PRODUKSI</th>
+                            <th>TANGGAL</th>
+                            <th>ID_KANDANG</th>
+                            <th>ID_KARYAWAN</th>
+                            <th>JUMLAH AYAM</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>4P</td>
+                            <td>2026-06-09</td>
+                            <td>KD01</td>
+                            <td>K01</td>
+                            <td>500</td>
+                            <td>
+                                <button class="edit">✏</button>
+                                <button class="delete">🗑</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>7</td>
+                            <td>2026-06-10</td>
+                            <td>KD02</td>
+                            <td>K02</td>
+                            <td>876</td>
+                            <td>
+                                <button class="edit">✏</button>
+                                <button class="delete">🗑</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>14</td>
+                            <td>2026-06-16</td>
+                            <td>KD03</td>
+                            <td>K03</td>
+                            <td>323</td>
+                            <td>
+                                <button class="edit">✏</button>
+                                <button class="delete">🗑</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2P</td>
+                            <td>2026-06-22</td>
+                            <td>KD04</td>
+                            <td>K04</td>
+                            <td>625</td>
+                            <td>
+                                <button class="edit">✏</button>
+                                <button class="delete">🗑</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>6</td>
+                            <td>2026-06-19</td>
+                            <td>KD05</td>
+                            <td>K05</td>
+                            <td>763</td>
+                            <td>
+                                <button class="edit">✏</button>
+                                <button class="delete">🗑</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

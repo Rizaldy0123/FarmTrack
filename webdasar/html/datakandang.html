@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Kandang</title>
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+
+<body >
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>🐔 FarmTrack</h2>
+            </div>
+
+            <ul>
+                <li>Dashboard</li>
+                <li class="active">Kandang</li>
+                <li>Produksi</li>
+                <li>Karyawan</li>
+                <li>Pakan</li>
+                <li>Pengaturan</li>
+            </ul>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <h1>DATA KANDANG</h1>
+
+            <!-- STAT CARD -->
+            <div class="cards">
+
+                <div class="card">
+                    <h4>Total Kandang</h4>
+                    <p>10</p>
+                </div>
+
+                <div class="card">
+                    <h4>Total Ayam</h4>
+                    <p>5,275</p>
+                </div>
+
+                <div class="card">
+                    <h4>Produksi Hari Ini</h4>
+                    <p>2,759</p>
+                </div>
+
+                <div class="card">
+                    <h4>Karyawan Aktif</h4>
+                    <p>8</p>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="top-controls">
+
+                <form action="proses.php" method="POST">
+                    
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search">
+                    </div>
+
+                    <button class="filter-btn">Umur Ayam</button>
+                    <button class="filter-btn">Jumlah Ayam</button>
+                    <button class="add-btn">Tambah Kandang</button>
+                </form>
+            </div>
+
+
+            <!-- TABLE -->
+            <div class="table-box">
+
+                <h2>KANDANG AYAM</h2>
+
+                <table>
+
+                    <tr>
+                        <th>ID Kandang</th>
+                        <th>Nama Kandang</th>
+                        <th>Status</th>
+                        <th>Jumlah Ayam</th>
+                        <th>ID Karyawan</th>
+                        <th>Umur Ayam</th>
+                    </tr>
+
+                    <tr>
+                        <td>KD01</td>
+                        <td>4P</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>500</td>
+                        <td>K01</td>
+                        <td>97</td>
+                    </tr>
+
+                    <tr>
+                        <td>KD02</td>
+                        <td>7</td>
+                        <td><span class="panen">Panen</span></td>
+                        <td>876</td>
+                        <td>K02</td>
+                        <td>97</td>
+                    </tr>
+
+                    <tr>
+                        <td>KD03</td>
+                        <td>14</td>
+                        <td><span class="kosong">Kosong</span></td>
+                        <td>323</td>
+                        <td>K03</td>
+                        <td>95</td>
+                    </tr>
+
+                    <tr>
+                        <td>KD04</td>
+                        <td>2P</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>625</td>
+                        <td>K04</td>
+                        <td>92</td>
+                    </tr>
+
+                    <tr>
+                        <td>KD05</td>
+                        <td>6</td>
+                        <td><span class="aktif">Aktif</span></td>
+                        <td>763</td>
+                        <td>K05</td>
+                        <td>92</td>
+                    </tr>
+
+
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
